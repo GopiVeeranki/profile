@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: https://code.devsnc.com/profile/profile/sitemap.xml
+Sitemap: https://gopiveeranki.github.io/profile/profile/sitemap.xml
