@@ -1,16 +1,16 @@
 const swconf = {
   
-    cacheName: 'lumos-1738142801',resources: [
-      '/pages/dev/lumos/assets/css/jekyll-theme-lumos.css',
-      '/pages/dev/lumos/',
+    cacheName: 'lumos-1738150544',resources: [
+      '/profile/assets/css/jekyll-theme-lumos.css',
+      '/profile/',
       
-        '/pages/dev/lumos/categories/',
+        '/profile/categories/',
       
-        '/pages/dev/lumos/tags/',
+        '/profile/tags/',
       
-        '/pages/dev/lumos/archives/',
+        '/profile/archives/',
       
-        '/pages/dev/lumos/about/',
+        '/profile/about/',
       
 
       

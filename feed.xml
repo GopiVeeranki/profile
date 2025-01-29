@@ -1,33 +1,33 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://localhost:4000/pages/dev/lumos/</id>
+  <id>https://code.devsnc.com/profile/profile/</id>
   <title>Lumos</title>
   <subtitle>Illuminate the best practices of coding, testing, debugging, automation, accessibility, internationalization, security, and productivity. This repository casts a spotlight on essential tools, articles, and resources for developers, all in one place.</subtitle>
-  <updated>2025-01-29T14:56:36+05:30</updated>
+  <updated>2025-01-29T17:05:41+05:30</updated>
   <author>
     <name>Sai Nagarjuna Reddy Tadiparthi</name>
-    <uri>http://localhost:4000/pages/dev/lumos/</uri>
+    <uri>https://code.devsnc.com/profile/profile/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://localhost:4000/pages/dev/lumos/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="https://code.devsnc.com/profile/profile/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en"
-    href="http://localhost:4000/pages/dev/lumos/"/>
+    href="https://code.devsnc.com/profile/profile/"/>
   <generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator>
   <rights> © 2025 Sai Nagarjuna Reddy Tadiparthi </rights>
-  <icon>/pages/dev/lumos/assets/img/favicons/favicon.ico</icon>
-  <logo>/pages/dev/lumos/assets/img/favicons/favicon-96x96.png</logo>
+  <icon>/profile//assets/img/favicons/favicon.ico</icon>
+  <logo>/profile//assets/img/favicons/favicon-96x96.png</logo>
 
 
   
   <entry>
     <title>AI Agents - Setup</title>
-    <link href="http://localhost:4000/pages/dev/lumos/posts/ai-agent-setup/" rel="alternate" type="text/html" title="AI Agents - Setup" />
+    <link href="https://code.devsnc.com/profile/profile/posts/ai-agent-setup/" rel="alternate" type="text/html" title="AI Agents - Setup" />
     <published>2025-01-13T00:00:00+05:30</published>
   
     <updated>2025-01-13T00:00:00+05:30</updated>
   
-    <id>http://localhost:4000/pages/dev/lumos/posts/ai-agent-setup/</id>
-    <content type="text/html" src="http://localhost:4000/pages/dev/lumos/posts/ai-agent-setup/" />
+    <id>https://code.devsnc.com/profile/profile/posts/ai-agent-setup/</id>
+    <content type="text/html" src="https://code.devsnc.com/profile/profile/posts/ai-agent-setup/" />
     <author>
       <name>Sai Nagarjuna Reddy Tadiparthi</name>
     </author>
@@ -45,13 +45,13 @@
   
   <entry>
     <title>AI Agents - Plugins</title>
-    <link href="http://localhost:4000/pages/dev/lumos/posts/ai-agent-plugins/" rel="alternate" type="text/html" title="AI Agents - Plugins" />
+    <link href="https://code.devsnc.com/profile/profile/posts/ai-agent-plugins/" rel="alternate" type="text/html" title="AI Agents - Plugins" />
     <published>2025-01-13T00:00:00+05:30</published>
   
     <updated>2025-01-13T00:00:00+05:30</updated>
   
-    <id>http://localhost:4000/pages/dev/lumos/posts/ai-agent-plugins/</id>
-    <content type="text/html" src="http://localhost:4000/pages/dev/lumos/posts/ai-agent-plugins/" />
+    <id>https://code.devsnc.com/profile/profile/posts/ai-agent-plugins/</id>
+    <content type="text/html" src="https://code.devsnc.com/profile/profile/posts/ai-agent-plugins/" />
     <author>
       <name>Sai Nagarjuna Reddy Tadiparthi</name>
     </author>
@@ -69,13 +69,13 @@
   
   <entry>
     <title>AI Agents - LAB</title>
-    <link href="http://localhost:4000/pages/dev/lumos/posts/ai-agent-lab/" rel="alternate" type="text/html" title="AI Agents - LAB" />
+    <link href="https://code.devsnc.com/profile/profile/posts/ai-agent-lab/" rel="alternate" type="text/html" title="AI Agents - LAB" />
     <published>2025-01-13T00:00:00+05:30</published>
   
     <updated>2025-01-13T00:00:00+05:30</updated>
   
-    <id>http://localhost:4000/pages/dev/lumos/posts/ai-agent-lab/</id>
-    <content type="text/html" src="http://localhost:4000/pages/dev/lumos/posts/ai-agent-lab/" />
+    <id>https://code.devsnc.com/profile/profile/posts/ai-agent-lab/</id>
+    <content type="text/html" src="https://code.devsnc.com/profile/profile/posts/ai-agent-lab/" />
     <author>
       <name>Sai Nagarjuna Reddy Tadiparthi</name>
     </author>
@@ -93,13 +93,13 @@
   
   <entry>
     <title>AI Agents - FAQ</title>
-    <link href="http://localhost:4000/pages/dev/lumos/posts/ai-agent-faq/" rel="alternate" type="text/html" title="AI Agents - FAQ" />
+    <link href="https://code.devsnc.com/profile/profile/posts/ai-agent-faq/" rel="alternate" type="text/html" title="AI Agents - FAQ" />
     <published>2025-01-13T00:00:00+05:30</published>
   
     <updated>2025-01-13T00:00:00+05:30</updated>
   
-    <id>http://localhost:4000/pages/dev/lumos/posts/ai-agent-faq/</id>
-    <content type="text/html" src="http://localhost:4000/pages/dev/lumos/posts/ai-agent-faq/" />
+    <id>https://code.devsnc.com/profile/profile/posts/ai-agent-faq/</id>
+    <content type="text/html" src="https://code.devsnc.com/profile/profile/posts/ai-agent-faq/" />
     <author>
       <name>Sai Nagarjuna Reddy Tadiparthi</name>
     </author>
@@ -117,13 +117,13 @@
   
   <entry>
     <title>Flow Designer - Wait for Message</title>
-    <link href="http://localhost:4000/pages/dev/lumos/posts/wait-for-message-fd/" rel="alternate" type="text/html" title="Flow Designer - Wait for Message" />
+    <link href="https://code.devsnc.com/profile/profile/posts/wait-for-message-fd/" rel="alternate" type="text/html" title="Flow Designer - Wait for Message" />
     <published>2025-01-01T00:00:00+05:30</published>
   
     <updated>2025-01-01T00:00:00+05:30</updated>
   
-    <id>http://localhost:4000/pages/dev/lumos/posts/wait-for-message-fd/</id>
-    <content type="text/html" src="http://localhost:4000/pages/dev/lumos/posts/wait-for-message-fd/" />
+    <id>https://code.devsnc.com/profile/profile/posts/wait-for-message-fd/</id>
+    <content type="text/html" src="https://code.devsnc.com/profile/profile/posts/wait-for-message-fd/" />
     <author>
       <name>Sai Nagarjuna Reddy Tadiparthi</name>
     </author>

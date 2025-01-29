@@ -2,7 +2,7 @@
   
   {
     "title": "AI Agents - Setup",
-    "url": "/pages/dev/lumos/posts/ai-agent-setup/",
+    "url": "/profile/posts/ai-agent-setup/",
     "categories": "Now Assist",
     "tags": "Now Assist, AI Agent",
     "date": "2025-01-13 00:00:00 +0530",
@@ -19,7 +19,7 @@
   
   {
     "title": "AI Agents - Plugins",
-    "url": "/pages/dev/lumos/posts/ai-agent-plugins/",
+    "url": "/profile/posts/ai-agent-plugins/",
     "categories": "Now Assist",
     "tags": "Now Assist, AI Agent",
     "date": "2025-01-13 00:00:00 +0530",
@@ -36,7 +36,7 @@
   
   {
     "title": "AI Agents - LAB",
-    "url": "/pages/dev/lumos/posts/ai-agent-lab/",
+    "url": "/profile/posts/ai-agent-lab/",
     "categories": "Now Assist",
     "tags": "Now Assist, AI Agent",
     "date": "2025-01-13 00:00:00 +0530",
@@ -53,7 +53,7 @@
   
   {
     "title": "AI Agents - FAQ",
-    "url": "/pages/dev/lumos/posts/ai-agent-faq/",
+    "url": "/profile/posts/ai-agent-faq/",
     "categories": "Now Assist",
     "tags": "Now Assist, AI Agent",
     "date": "2025-01-13 00:00:00 +0530",
@@ -70,7 +70,7 @@
   
   {
     "title": "Flow Designer - Wait for Message",
-    "url": "/pages/dev/lumos/posts/wait-for-message-fd/",
+    "url": "/profile/posts/wait-for-message-fd/",
     "categories": "Blog",
     "tags": "Blog, Flow Designer, Wait for Message, FD",
     "date": "2025-01-01 00:00:00 +0530",
@@ -87,7 +87,7 @@
   
   {
     "title": "Software Design Patterns",
-    "url": "/pages/dev/lumos/posts/software-design-pattern/",
+    "url": "/profile/posts/software-design-pattern/",
     "categories": "Blog",
     "tags": "Blog, Software Design, Design Patterns",
     "date": "2025-01-01 00:00:00 +0530",
@@ -104,7 +104,7 @@
   
   {
     "title": "Plugins Explained",
-    "url": "/pages/dev/lumos/posts/plugins-explained/",
+    "url": "/profile/posts/plugins-explained/",
     "categories": "Blog",
     "tags": "Plugins",
     "date": "2024-12-20 00:00:00 +0530",
@@ -121,7 +121,7 @@
   
   {
     "title": "How fix scripts run?",
-    "url": "/pages/dev/lumos/posts/how-fix-scripts-run/",
+    "url": "/profile/posts/how-fix-scripts-run/",
     "categories": "Blog",
     "tags": "Blog, Fix Scripts, Fix, Script, Upgrades",
     "date": "2024-12-20 00:00:00 +0530",
@@ -138,7 +138,7 @@
   
   {
     "title": "Script - Add Roles to Users",
-    "url": "/pages/dev/lumos/posts/script-add-roles-to-users/",
+    "url": "/profile/posts/script-add-roles-to-users/",
     "categories": "Scripting",
     "tags": "Scripting, Script, Add Roles, ServiceNow",
     "date": "2024-12-19 00:00:00 +0530",
@@ -155,7 +155,7 @@
   
   {
     "title": "Setup Email Inbound & Outbound Configuration in Local Instane",
-    "url": "/pages/dev/lumos/posts/setup-email-local-instance/",
+    "url": "/profile/posts/setup-email-local-instance/",
     "categories": "Miscellaneous",
     "tags": "Miscellaneous, Email, Setup, Local Instance, Inbound, Outbound",
     "date": "2024-12-19 00:00:00 +0530",
@@ -172,7 +172,7 @@
   
   {
     "title": "Logging and Monitoring",
-    "url": "/pages/dev/lumos/posts/logging-monitoring/",
+    "url": "/profile/posts/logging-monitoring/",
     "categories": "Coding Standards",
     "tags": "Coding Standards, Code, Standards, Logging, Monitoring",
     "date": "2024-12-19 00:00:00 +0530",
@@ -189,7 +189,7 @@
   
   {
     "title": "Script - Group Generator",
-    "url": "/pages/dev/lumos/posts/script-create-groups/",
+    "url": "/profile/posts/script-create-groups/",
     "categories": "Scripting",
     "tags": "Scripting, Script, Group, Group Creation, Create Group, Generate Group, Group Generation",
     "date": "2024-12-18 00:00:00 +0530",
@@ -206,7 +206,7 @@
   
   {
     "title": "Script - User Generator",
-    "url": "/pages/dev/lumos/posts/script-create-users/",
+    "url": "/profile/posts/script-create-users/",
     "categories": "Scripting",
     "tags": "Scripting, Script, User, User Creation, Create User, Generate User, User Generation",
     "date": "2024-12-17 00:00:00 +0530",
@@ -223,7 +223,7 @@
   
   {
     "title": "Script - Template",
-    "url": "/pages/dev/lumos/posts/script-new-template/",
+    "url": "/profile/posts/script-new-template/",
     "categories": "Scripting",
     "tags": "Scripting, Script, Template, New Script, Create Script",
     "date": "2024-12-16 00:00:00 +0530",
@@ -240,7 +240,7 @@
   
   {
     "title": "Text and Typography",
-    "url": "/pages/dev/lumos/posts/text-and-typography/",
+    "url": "/profile/posts/text-and-typography/",
     "categories": "Guides",
     "tags": "Guides, Typography, Text, Layout, Math, Equations, Diagrams, FlowCharts, Pictures, Videos, Images, HTML, Markup, Tables, Footnote, Heading",
     "date": "2024-12-03 00:00:00 +0530",
@@ -257,7 +257,7 @@
   
   {
     "title": "Writing a New Post",
-    "url": "/pages/dev/lumos/posts/write-a-new-post/",
+    "url": "/profile/posts/write-a-new-post/",
     "categories": "Guides",
     "tags": "Guides, Writing, Post, Front Matter, Categories, Tags, TOC",
     "date": "2024-12-02 00:00:00 +0530",
@@ -274,7 +274,7 @@
   
   {
     "title": "Getting Started",
-    "url": "/pages/dev/lumos/posts/getting-started/",
+    "url": "/profile/posts/getting-started/",
     "categories": "Guides",
     "tags": "Guides, Getting Started, Setup, Build, Deploy, Server, Jekyll",
     "date": "2024-12-01 00:00:00 +0530",

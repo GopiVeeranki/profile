@@ -2,7 +2,7 @@
 <browserconfig>
   <msapplication>
     <tile>
-      <square150x150logo src="/pages/dev/lumos/pages/dev/lumos/assets/img/favicons/web-app-manifest-192x192.png" />
+      <square150x150logo src="/profile/profile/assets/img/favicons/web-app-manifest-192x192.png" />
       <TileColor>#da532c</TileColor>
     </tile>
   </msapplication>
