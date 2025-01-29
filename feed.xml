@@ -2,9 +2,9 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom">
   <id>https://code.devsnc.com/profile/profile/</id>
-  <title>Lumos</title>
+  <title>Momos</title>
   <subtitle>Illuminate the best practices of coding, testing, debugging, automation, accessibility, internationalization, security, and productivity. This repository casts a spotlight on essential tools, articles, and resources for developers, all in one place.</subtitle>
-  <updated>2025-01-29T17:19:17+05:30</updated>
+  <updated>2025-01-29T17:29:55+05:30</updated>
   <author>
     <name>Gopi Veeranki</name>
     <uri>https://code.devsnc.com/profile/profile/</uri>
