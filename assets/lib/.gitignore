@@ -1,0 +1,15 @@
+node
+node_modules
+target
+
+.build
+.DS_Store
+.gradle
+.idea
+.repository
+.sass-cache
+.settings
+
+*.iml
+*/.settings/org.eclipse.m2e.core.prefs
+*/.idea
