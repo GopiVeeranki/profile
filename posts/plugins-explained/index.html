@@ -31,7 +31,7 @@
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Plugins Explained" />
-<meta name="author" content="Sai Nagarjuna Reddy Tadiparthi" />
+<meta name="author" content="Gopi Veeranki" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Expore how fix scripts run in various scenarios, including UI-triggered executions, instance upgrades, application installations, plugin activations, and repairs, while highlighting notable changes introduced in the Quebec release." />
 <meta property="og:description" content="Expore how fix scripts run in various scenarios, including UI-triggered executions, instance upgrades, application installations, plugin activations, and repairs, while highlighting notable changes introduced in the Quebec release." />
@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Plugins Explained" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sai Nagarjuna Reddy Tadiparthi","url":"https://code.devsnc.com/sainagarj-tadiparthi"},"dateModified":"2024-12-20T00:00:00+05:30","datePublished":"2024-12-20T00:00:00+05:30","description":"Expore how fix scripts run in various scenarios, including UI-triggered executions, instance upgrades, application installations, plugin activations, and repairs, while highlighting notable changes introduced in the Quebec release.","headline":"Plugins Explained","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/plugins-explained/"},"url":"https://code.devsnc.com/profile/profile/posts/plugins-explained/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gopi Veeranki","url":"https://github.com/GopiVeeranki"},"dateModified":"2024-12-20T00:00:00+05:30","datePublished":"2024-12-20T00:00:00+05:30","description":"Expore how fix scripts run in various scenarios, including UI-triggered executions, instance upgrades, application installations, plugin activations, and repairs, while highlighting notable changes introduced in the Quebec release.","headline":"Plugins Explained","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/plugins-explained/"},"url":"https://code.devsnc.com/profile/profile/posts/plugins-explained/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -313,7 +313,7 @@
 
       
         <a
-          href="https://code.devsnc.com/sainagarj-tadiparthi"
+          href="https://code.devsnc.com/gopi-veeranki"
           aria-label="code.devsnc"
           
 
@@ -463,6 +463,27 @@
   
   
 
+  
+    
+    
+
+    
+      
+        
+        
+      
+
+      
+      
+
+      
+      
+      
+
+      
+    
+
+    
   
 
   
@@ -683,7 +704,7 @@
 
           
             
-              <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>
+              <a href="https://github.com/GopiVeeranki">Gopi Veeranki</a>
               
             
           
@@ -745,8 +766,8 @@
 
 <p>The following example is the plugin.xml for home pages. It adds the home decoration to the top frame and registers a jelly tag and a AJAX processor:</p>
 
-<div file="plugin.xml" class="language-xml highlighter-rouge"><div class="code-header">
-        <span data-label-text="plugin.xml"><i class="far fa-file-code fa-fw"></i></span>
+<div class="language-xml highlighter-rouge"><div class="code-header">
+        <span data-label-text="XML"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -781,10 +802,10 @@
  <span class="nt">&lt;/plugin&gt;</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>Here is another example, of the monitor plugin. This shows how you can make a plugin dependent on another plugin, using the <requires> tag. When this plugin is enabled, it will also enable the com.glideapp.agent plugin if it isn't already registered:</requires></p>
+<p file="plugin.xml">Here is another example, of the monitor plugin. This shows how you can make a plugin dependent on another plugin, using the <requires> tag. When this plugin is enabled, it will also enable the com.glideapp.agent plugin if it isn't already registered:</requires></p>
 
-<div file="plugin.xml" class="language-xml highlighter-rouge"><div class="code-header">
-        <span data-label-text="plugin.xml"><i class="far fa-file-code fa-fw"></i></span>
+<div class="language-xml highlighter-rouge"><div class="code-header">
+        <span data-label-text="XML"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -808,7 +829,8 @@
    <span class="nt">&lt;/requires&gt;</span>
  <span class="nt">&lt;/plugin&gt;</span>
 </pre></td></tr></tbody></table></code></div></div>
-<hr />
+
+<h2 id="-filepluginxml"><span class="me-2">{: file=’plugin.xml’}</span><a href="#-filepluginxml" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <h3 id="files--directories"><span class="me-2">Files &amp; Directories</span><a href="#files--directories" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
@@ -826,6 +848,7 @@
 </ul>
 
 <h4 id="others"><span class="me-2">Others</span><a href="#others" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
 <ul>
   <li>sys.scripts/ - Additional scripts, these appear in Scripts Background</li>
   <li>unload.demo/ - This data is ONLY loaded when the demo data is loaded</li>
@@ -836,6 +859,7 @@
 <h3 id="extension-points"><span class="me-2">Extension points</span><a href="#extension-points" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <h4 id="comglideajaxprocessors---registers-an-ajax-processor"><span class="me-2">com.glide.ajax.processors - Registers an AJAX processor</span><a href="#comglideajaxprocessors---registers-an-ajax-processor" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
 <ul>
   <li>Example:
     <ul>
@@ -855,6 +879,7 @@
 </pre></td></tr></tbody></table></code></div></div>
 
 <h4 id="comglideprocessors---registers-a-glide-java-processor"><span class="me-2">com.glide.processors - Registers a glide java processor</span><a href="#comglideprocessors---registers-a-glide-java-processor" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
 <ul>
   <li>Example:</li>
 </ul>
@@ -868,6 +893,7 @@
 </pre></td></tr></tbody></table></code></div></div>
 
 <h4 id="comglideuijelly---registers-a-jelly-tag"><span class="me-2">com.glide.ui.jelly - Registers a jelly tag.</span><a href="#comglideuijelly---registers-a-jelly-tag" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
 <ul>
   <li>Example:
     <ul>
@@ -885,6 +911,7 @@
 </pre></td></tr></tbody></table></code></div></div>
 
 <h4 id="comglideui---alter-the-glide-ui"><span class="me-2">com.glide.ui - Alter the glide ui.</span><a href="#comglideui---alter-the-glide-ui" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
 <ul>
   <li>Example:
     <ul>
@@ -904,6 +931,7 @@
 </pre></td></tr></tbody></table></code></div></div>
 
 <h4 id="comglidescriptengine---add-a-new-script-engine"><span class="me-2">com.glide.script.engine - Add a new script engine.</span><a href="#comglidescriptengine---add-a-new-script-engine" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
 <ul>
   <li>Example:
     <ul>
@@ -2578,7 +2606,7 @@
     <time>2025</time>
 
     
-      <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>.
+      <a href="https://code.devsnc.com/gopi-veeranki">Gopi Veeranki</a>.
     
   </p>
 

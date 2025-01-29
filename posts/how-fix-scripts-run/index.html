@@ -31,7 +31,7 @@
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="How fix scripts run?" />
-<meta name="author" content="Sai Nagarjuna Reddy Tadiparthi" />
+<meta name="author" content="Gopi Veeranki" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Expore how fix scripts run in various scenarios, including UI-triggered executions, instance upgrades, application installations, plugin activations, and repairs, while highlighting notable changes introduced in the Quebec release." />
 <meta property="og:description" content="Expore how fix scripts run in various scenarios, including UI-triggered executions, instance upgrades, application installations, plugin activations, and repairs, while highlighting notable changes introduced in the Quebec release." />
@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="How fix scripts run?" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sai Nagarjuna Reddy Tadiparthi","url":"https://code.devsnc.com/sainagarj-tadiparthi"},"dateModified":"2024-12-20T00:00:00+05:30","datePublished":"2024-12-20T00:00:00+05:30","description":"Expore how fix scripts run in various scenarios, including UI-triggered executions, instance upgrades, application installations, plugin activations, and repairs, while highlighting notable changes introduced in the Quebec release.","headline":"How fix scripts run?","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/how-fix-scripts-run/"},"url":"https://code.devsnc.com/profile/profile/posts/how-fix-scripts-run/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gopi Veeranki","url":"https://github.com/GopiVeeranki"},"dateModified":"2024-12-20T00:00:00+05:30","datePublished":"2024-12-20T00:00:00+05:30","description":"Expore how fix scripts run in various scenarios, including UI-triggered executions, instance upgrades, application installations, plugin activations, and repairs, while highlighting notable changes introduced in the Quebec release.","headline":"How fix scripts run?","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/how-fix-scripts-run/"},"url":"https://code.devsnc.com/profile/profile/posts/how-fix-scripts-run/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -313,7 +313,7 @@
 
       
         <a
-          href="https://code.devsnc.com/sainagarj-tadiparthi"
+          href="https://code.devsnc.com/gopi-veeranki"
           aria-label="code.devsnc"
           
 
@@ -704,7 +704,7 @@
 
           
             
-              <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>
+              <a href="https://github.com/GopiVeeranki">Gopi Veeranki</a>
               
             
           
@@ -753,6 +753,7 @@
     <h3 id="types"><span class="me-2">Types</span><a href="#types" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
 
 <p>There are two types of fix scripts:</p>
+
 <ul>
   <li><code class="language-plaintext highlighter-rouge">glidefix</code>
     <ul>
@@ -811,12 +812,14 @@
 <ul>
   <li>
     <h4 id="active"><span class="me-2">Active</span><a href="#active" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
     <ul>
       <li><code class="language-plaintext highlighter-rouge">active</code> was a field for <code class="language-plaintext highlighter-rouge">sys_script_fix</code>. We shouldn’t have to check in any fix script into our code base with <code class="language-plaintext highlighter-rouge">active</code>=false, hence remove the <code class="language-plaintext highlighter-rouge">active</code> field in Quebec. The default value is true. <code class="language-plaintext highlighter-rouge">glidefix</code> is always treated as <code class="language-plaintext highlighter-rouge">active</code>=true.</li>
     </ul>
   </li>
   <li>
     <h4 id="run-once"><span class="me-2">Run Once</span><a href="#run-once" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
     <ul>
       <li><code class="language-plaintext highlighter-rouge">run_once</code> was a field for <code class="language-plaintext highlighter-rouge">sys_script_fix</code> and removed in Quebec. The default value is true for <code class="language-plaintext highlighter-rouge">sys_script_fix</code> and <code class="language-plaintext highlighter-rouge">glidefix</code>.</li>
       <li><code class="language-plaintext highlighter-rouge">glidefix</code> supports run_once tag (true or false). For <code class="language-plaintext highlighter-rouge">glidefix</code> with run_once=false, it will not run in the next upgrade unless the file content is changed.</li>
@@ -914,9 +917,10 @@ While running <code class="language-plaintext highlighter-rouge">sys_script_fix<
 <ul>
   <li>
     <h4 id="ui"><span class="me-2">UI</span><a href="#ui" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h4>
+
     <ul>
       <li><code class="language-plaintext highlighter-rouge">run_once</code> is not evaluated and it will always run.</li>
-      <li>Before Quebec, if <code class="language-plaintext highlighter-rouge">active</code>=false, the system will pop up warning message “That fix script is inactive.  To run the fix script, first activate it.” and prevent the script from running.</li>
+      <li>Before Quebec, if <code class="language-plaintext highlighter-rouge">active</code>=false, the system will pop up warning message “That fix script is inactive. To run the fix script, first activate it.” and prevent the script from running.</li>
       <li>From Quebec onward, the <code class="language-plaintext highlighter-rouge">active</code> field is dropped from DB and UI, so there is no check for active anymore.</li>
     </ul>
   </li>
@@ -1027,6 +1031,7 @@ While running <code class="language-plaintext highlighter-rouge">sys_script_fix<
 
 <p>Dropping <code class="language-plaintext highlighter-rouge">active</code> and <code class="language-plaintext highlighter-rouge">run_once</code> does not affect how the system executes existing fix scripts during the upgrade. The evaluation logic remains the same.
 The system evaluates the XML file in distribution and not from <code class="language-plaintext highlighter-rouge">sys_script_fix</code> table.</p>
+
 <ul>
   <li>If there are existing legacy <code class="language-plaintext highlighter-rouge">sys_script_fix</code> XML files with <code class="language-plaintext highlighter-rouge">run_once</code>=false and active=false, the system still honors that.</li>
   <li>Running scripts from UI does not evaluate run_once, so the behavior is the same as before.</li>
@@ -1035,14 +1040,14 @@ The system evaluates the XML file in distribution and not from <code class="lang
 
 <p><code class="language-plaintext highlighter-rouge">flush_cache</code> is not evaluated any more both during the upgrade and when running fix scripts from UI from Quebec. Flush cache is not recommended since it may cause system malfunction. <code class="language-plaintext highlighter-rouge">flush_cache</code> has not been honored during upgrade since Fuji release.</p>
 
-<blockquote class="prompt-danger">
-  <p>Any customization made on the <code class="language-plaintext highlighter-rouge">sys_script_fix</code> through Fix Scripts UI will apply only when running fix scripts through “Run Fix Script” button. Instance upgrades, application installation/upgrade, or plugin activation/repair only use the fix script XML file inside the distribution.</p>
+<blockquote>
+  <p class="prompt-danger">Any customization made on the <code class="language-plaintext highlighter-rouge">sys_script_fix</code> through Fix Scripts UI will apply only when running fix scripts through “Run Fix Script” button. Instance upgrades, application installation/upgrade, or plugin activation/repair only use the fix script XML file inside the distribution.</p>
 </blockquote>
 
 <p>In Quebec an annotation is added at the top of the fix script UI form:</p>
 
-<blockquote class="prompt-info">
-  <p>Any Customizations you make to the fix script will apply only when you manually run the script. Instance upgrades use the out of box fix script.</p>
+<blockquote>
+  <p class="prompt-info">Any Customizations you make to the fix script will apply only when you manually run the script. Instance upgrades use the out of box fix script.</p>
 </blockquote>
 
 <p>For newly created <code class="language-plaintext highlighter-rouge">sys_script_fix</code> records from Quebec onward, there are no <code class="language-plaintext highlighter-rouge">active</code>, <code class="language-plaintext highlighter-rouge">run_once</code>, and <code class="language-plaintext highlighter-rouge">flush_cache</code> tags in the generated XML file; When modifying an existing legacy <code class="language-plaintext highlighter-rouge">sys_script_fix</code> record in Quebec, the <code class="language-plaintext highlighter-rouge">active</code>, run_once, and flush_cache tags are also dropped in the generated XML file.</p>
@@ -2760,7 +2765,7 @@ The system evaluates the XML file in distribution and not from <code class="lang
     <time>2025</time>
 
     
-      <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>.
+      <a href="https://code.devsnc.com/gopi-veeranki">Gopi Veeranki</a>.
     
   </p>
 

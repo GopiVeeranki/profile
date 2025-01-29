@@ -31,7 +31,7 @@
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Script - User Generator" />
-<meta name="author" content="Sai Nagarjuna Reddy Tadiparthi" />
+<meta name="author" content="Gopi Veeranki" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="This page documents the User Generator Script, a JavaScript function that automates the creation of users in the sys_user table. The script is highly customizable, allowing you to specify the starting index, the number of users to create, a name prefix, and the user password." />
 <meta property="og:description" content="This page documents the User Generator Script, a JavaScript function that automates the creation of users in the sys_user table. The script is highly customizable, allowing you to specify the starting index, the number of users to create, a name prefix, and the user password." />
@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Script - User Generator" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sai Nagarjuna Reddy Tadiparthi","url":"https://code.devsnc.com/sainagarj-tadiparthi"},"dateModified":"2025-01-06T13:22:21+05:30","datePublished":"2024-12-17T00:00:00+05:30","description":"This page documents the User Generator Script, a JavaScript function that automates the creation of users in the sys_user table. The script is highly customizable, allowing you to specify the starting index, the number of users to create, a name prefix, and the user password.","headline":"Script - User Generator","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/script-create-users/"},"url":"https://code.devsnc.com/profile/profile/posts/script-create-users/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gopi Veeranki","url":"https://github.com/GopiVeeranki"},"dateModified":"2025-01-06T13:22:21+05:30","datePublished":"2024-12-17T00:00:00+05:30","description":"This page documents the User Generator Script, a JavaScript function that automates the creation of users in the sys_user table. The script is highly customizable, allowing you to specify the starting index, the number of users to create, a name prefix, and the user password.","headline":"Script - User Generator","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/script-create-users/"},"url":"https://code.devsnc.com/profile/profile/posts/script-create-users/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -313,7 +313,7 @@
 
       
         <a
-          href="https://code.devsnc.com/sainagarj-tadiparthi"
+          href="https://code.devsnc.com/gopi-veeranki"
           aria-label="code.devsnc"
           
 
@@ -618,7 +618,7 @@
 
           
             
-              <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>
+              <a href="https://github.com/GopiVeeranki">Gopi Veeranki</a>
               
             
           
@@ -656,7 +656,7 @@
             By:
             <em>
               
-                <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>
+                <a href="https://github.com/GopiVeeranki">Gopi Veeranki</a>
                 
               
             </em>
@@ -700,6 +700,7 @@
 
   <div class="content">
     <h2 id="table-of-contents"><span class="me-2">Table of Contents</span><a href="#table-of-contents" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
 <ul>
   <li><a href="#overview">Overview</a></li>
   <li><a href="#code-example">Code Example</a></li>
@@ -714,6 +715,7 @@
 <h2 id="overview"><span class="me-2">Overview</span><a href="#overview" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <p>The <strong>User Creation Script</strong> provides an efficient way to generate multiple user records in the ServiceNow <code class="language-plaintext highlighter-rouge">sys_user</code> table. You can specify:</p>
+
 <ul>
   <li>The <strong>starting index</strong> for the user names.</li>
   <li>The <strong>number of users</strong> to create.</li>
@@ -765,10 +767,11 @@
 34
 35
 36
+37
 </pre></td><td class="rouge-code"><pre><span class="cm">/**
  * Generates a list of user IDs by creating multiple users in the `sys_user` table.
  * The user data includes a user name, password, first and last names, email, and phone number.
- * 
+ *
  * @param {number} startIndex - The index to start generating user names from.
  * @param {number} userCount - The number of users to create.
  * @param {string} namePrefix - The prefix for user names and first names.
@@ -779,26 +782,27 @@
   <span class="kd">var</span> <span class="nx">userIds</span> <span class="o">=</span> <span class="p">[];</span>
   <span class="kd">var</span> <span class="nx">userGr</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">GlideRecord</span><span class="p">(</span><span class="dl">"</span><span class="s2">sys_user</span><span class="dl">"</span><span class="p">);</span>
   <span class="nx">userGr</span><span class="p">.</span><span class="nf">initialize</span><span class="p">();</span>
-  
+
   <span class="c1">// Loop through the number of users to create</span>
-  <span class="k">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">startIndex</span><span class="p">;</span> <span class="nx">index</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nx">startIndex</span> <span class="o">+</span> <span class="nx">userCount</span><span class="p">);</span> <span class="nx">index</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">startIndex</span><span class="p">;</span> <span class="nx">index</span> <span class="o">&lt;</span> <span class="nx">startIndex</span> <span class="o">+</span> <span class="nx">userCount</span><span class="p">;</span> <span class="nx">index</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">userName</span> <span class="o">=</span> <span class="nx">namePrefix</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">lname</span><span class="dl">"</span> <span class="o">+</span> <span class="nx">index</span><span class="p">;</span>
-    
+
     <span class="c1">// Assign user details</span>
     <span class="nx">userGr</span><span class="p">.</span><span class="nx">user_name</span> <span class="o">=</span> <span class="nx">userName</span><span class="p">;</span>
     <span class="nx">userGr</span><span class="p">.</span><span class="nx">user_password</span><span class="p">.</span><span class="nf">setDisplayValue</span><span class="p">(</span><span class="nx">password</span><span class="p">);</span>
     <span class="nx">userGr</span><span class="p">.</span><span class="nx">first_name</span> <span class="o">=</span> <span class="nx">namePrefix</span> <span class="o">+</span> <span class="nx">index</span><span class="p">;</span>
     <span class="nx">userGr</span><span class="p">.</span><span class="nx">last_name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">lname</span><span class="dl">"</span><span class="p">;</span>
     <span class="nx">userGr</span><span class="p">.</span><span class="nx">email</span> <span class="o">=</span> <span class="nx">userName</span><span class="p">.</span><span class="nf">toLowerCase</span><span class="p">()</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">@example.com</span><span class="dl">"</span><span class="p">;</span>
-    
+
     <span class="c1">// Generate random phone number</span>
-    <span class="nx">userGr</span><span class="p">.</span><span class="nx">phone</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">+1</span><span class="dl">"</span> <span class="o">+</span> <span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4089999999</span> <span class="o">-</span> <span class="mi">4010000000</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4010000000</span><span class="p">));</span>
+    <span class="nx">userGr</span><span class="p">.</span><span class="nx">phone</span> <span class="o">=</span>
+      <span class="dl">"</span><span class="s2">+1</span><span class="dl">"</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="p">(</span><span class="mi">4089999999</span> <span class="o">-</span> <span class="mi">4010000000</span><span class="p">)</span> <span class="o">+</span> <span class="mi">4010000000</span><span class="p">);</span>
     <span class="nx">userGr</span><span class="p">.</span><span class="nf">setWorkflow</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
-    
+
     <span class="c1">// Insert user and add the ID to the list</span>
     <span class="nx">userIds</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="nx">userGr</span><span class="p">.</span><span class="nf">insert</span><span class="p">());</span>
   <span class="p">}</span>
-  
+
   <span class="k">return</span> <span class="nx">userIds</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
@@ -864,13 +868,14 @@ An array containing the record IDs of each created user in the <code class="lang
 4
 5
 </pre></td><td class="rouge-code"><pre><span class="c1">// Example usage of generateUsers function to create 1000 users starting from index 1</span>
-<span class="kd">var</span> <span class="nx">userIds</span> <span class="o">=</span> <span class="nf">generateUsers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="dl">'</span><span class="s1">GeneratedUser</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">Welcome1$</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">userIds</span> <span class="o">=</span> <span class="nf">generateUsers</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="dl">"</span><span class="s2">GeneratedUser</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">Welcome1$</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="c1">// Log the user IDs created</span>
-<span class="nx">gs</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="dl">'</span><span class="s1">Generated User IDs: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">userIds</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">, </span><span class="dl">'</span><span class="p">));</span>
+<span class="nx">gs</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="dl">"</span><span class="s2">Generated User IDs: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">userIds</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="dl">"</span><span class="s2">, </span><span class="dl">"</span><span class="p">));</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>In this example:</p>
+
 <ul>
   <li>The generateUsers function is called with the starting index 1, the user count 1000, the name prefix ‘GeneratedUser’, and the password ‘Welcome1$’.</li>
   <li>The function will create 1000 users with names like GeneratedUser1, GeneratedUser2, …, and assign the password ‘Welcome1$’ to each user.
@@ -2569,7 +2574,7 @@ The function will return an array of the IDs of all the created users.</li>
     <time>2025</time>
 
     
-      <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>.
+      <a href="https://code.devsnc.com/gopi-veeranki">Gopi Veeranki</a>.
     
   </p>
 

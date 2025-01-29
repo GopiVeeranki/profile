@@ -31,7 +31,7 @@
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Flow Designer - Wait for Message" />
-<meta name="author" content="Sai Nagarjuna Reddy Tadiparthi" />
+<meta name="author" content="Gopi Veeranki" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="This guide explains how to use the Wait for Message action in the Flow Designer." />
 <meta property="og:description" content="This guide explains how to use the Wait for Message action in the Flow Designer." />
@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Flow Designer - Wait for Message" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sai Nagarjuna Reddy Tadiparthi","url":"https://code.devsnc.com/sainagarj-tadiparthi"},"dateModified":"2025-01-01T00:00:00+05:30","datePublished":"2025-01-01T00:00:00+05:30","description":"This guide explains how to use the Wait for Message action in the Flow Designer.","headline":"Flow Designer - Wait for Message","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/wait-for-message-fd/"},"url":"https://code.devsnc.com/profile/profile/posts/wait-for-message-fd/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gopi Veeranki","url":"https://github.com/GopiVeeranki"},"dateModified":"2025-01-01T00:00:00+05:30","datePublished":"2025-01-01T00:00:00+05:30","description":"This guide explains how to use the Wait for Message action in the Flow Designer.","headline":"Flow Designer - Wait for Message","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/wait-for-message-fd/"},"url":"https://code.devsnc.com/profile/profile/posts/wait-for-message-fd/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -313,7 +313,7 @@
 
       
         <a
-          href="https://code.devsnc.com/sainagarj-tadiparthi"
+          href="https://code.devsnc.com/gopi-veeranki"
           aria-label="code.devsnc"
           
 
@@ -781,7 +781,7 @@
 
           
             
-              <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>
+              <a href="https://github.com/GopiVeeranki">Gopi Veeranki</a>
               
             
           
@@ -837,9 +837,11 @@ The user can then send the message by using <code class="language-plaintext high
 <hr />
 
 <h2 id="prerequisite-how-will-users-get-context_id-for-sending-messages"><span class="me-2">Prerequisite (How will users get context_id for sending messages?)</span><a href="#prerequisite-how-will-users-get-context_id-for-sending-messages" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
 <p>In workflow, we have a method <code class="language-plaintext highlighter-rouge">getRunningFlows(glideRecord)</code> which gives the running workflow contexts for a particular record. A user can then use <code class="language-plaintext highlighter-rouge">broadcastEvent()</code> using this context id.</p>
 
 <p>We should consider providing below 2 APIs that will serve as a starting point -</p>
+
 <ul>
   <li>We should consider creating <code class="language-plaintext highlighter-rouge">sn_fd.FlowAPI.getRunningFlows(source_glide_record, flow_internal_name)</code>, this should return the glide record of <code class="language-plaintext highlighter-rouge">sys_flow_context</code> for the <code class="language-plaintext highlighter-rouge">source_glide_record</code> and matching <code class="language-plaintext highlighter-rouge">flow_internal_name</code>. If no such records are found, it will simply return an empty glide record.</li>
   <li>We should also consider creating <code class="language-plaintext highlighter-rouge">sn_fd.FlowAPI.getRunningSubflows(flow_context_sys_id, subflow_internal_name)</code> (or something similar) which would return context id of the subflows, so that user can use this (Wait For Message) functionality.</li>
@@ -848,22 +850,27 @@ The user can then send the message by using <code class="language-plaintext high
 <hr />
 
 <h2 id="considerations"><span class="me-2">Considerations</span><a href="#considerations" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
 <ol>
-  <li>Can there be a race condition (Flow is trying to execute Wait For Message instruction and message arrives at the same time)?
-    <ul>
-      <li>Ideally No, if the flow is running and user sends a message, the message won’t be able to get mutex and simply wait for retry (existing behaviour). Flow needs to be in quiesced state for the message to work. If the flow is not waiting for a message (waiting for some other condition or duration or different message) then also there’s no race condition, the message will simply be ignored because there’s nothing to do with it.</li>
-    </ul>
-  </li>
-  <li>What is the data type of “message”?
-    <ul>
-      <li>For now, “message” is considered as a string (this is similar to workflow). Sending a payload is considered a future enhancement, please <a href="#future-enhancements-if-and-when-there-are-use-cases">refer</a></li>
-    </ul>
-  </li>
+  <li>Can there be a race condition (Flow is trying to execute Wait For Message instruction and message arrives at the same time)?</li>
 </ol>
+
+<ul>
+  <li>Ideally No, if the flow is running and user sends a message, the message won’t be able to get mutex and simply wait for retry (existing behaviour). Flow needs to be in quiesced state for the message to work. If the flow is not waiting for a message (waiting for some other condition or duration or different message) then also there’s no race condition, the message will simply be ignored because there’s nothing to do with it.</li>
+</ul>
+
+<ol>
+  <li>What is the data type of “message”?</li>
+</ol>
+
+<ul>
+  <li>For now, “message” is considered as a string (this is similar to workflow). Sending a payload is considered a future enhancement, please <a href="#future-enhancements-if-and-when-there-are-use-cases">refer</a></li>
+</ul>
 
 <hr />
 
 <h2 id="design-how-users-will-use-in-flow"><span class="me-2">Design (How users will use in flow?)</span><a href="#design-how-users-will-use-in-flow" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
 <ul>
   <li>provide a new OOB step and action for “Wait For Message”</li>
   <li>we will take <code class="language-plaintext highlighter-rouge">message</code> input from the user.</li>
@@ -872,7 +879,9 @@ The user can then send the message by using <code class="language-plaintext high
 <hr />
 
 <h2 id="apis-for-users-how-users-will-send-message-from-script"><span class="me-2">APIs for users (How users will send message from script?)</span><a href="#apis-for-users-how-users-will-send-message-from-script" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
 <p>provide users with below new method (and its variants as required)</p>
+
 <ul>
   <li><code class="language-plaintext highlighter-rouge">sn_fd.FlowAPI.sendMessage(context_id, message)</code>
     <blockquote>
@@ -888,6 +897,7 @@ The user can then send the message by using <code class="language-plaintext high
 <hr />
 
 <h2 id="compilation-flow-engine"><span class="me-2">Compilation (Flow Engine)</span><a href="#compilation-flow-engine" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
 <ul>
   <li>New Instruction and its compiler and executor</li>
 </ul>
@@ -895,6 +905,7 @@ The user can then send the message by using <code class="language-plaintext high
 <hr />
 
 <h2 id="execution-flow-engine"><span class="me-2">Execution (Flow Engine)</span><a href="#execution-flow-engine" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
 <ul>
   <li>
     <p>When the cursor reaches <code class="language-plaintext highlighter-rouge">wait for message</code> instruction, it will go into quiesce state.
@@ -914,6 +925,7 @@ The user can then send the message by using <code class="language-plaintext high
 <hr />
 
 <h2 id="current-limitations-exist-in-workflow-but-not-being-considered-here"><span class="me-2">Current Limitations (Exist in workflow but not being considered here)</span><a href="#current-limitations-exist-in-workflow-but-not-being-considered-here" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
 <ul>
   <li>no alternatives for <code class="language-plaintext highlighter-rouge">registerForEvent()</code>, <code class="language-plaintext highlighter-rouge">unRegisterForEvent()</code> &amp; <code class="language-plaintext highlighter-rouge">broadcastEvent()</code> offered by workflow .</li>
 </ul>
@@ -2581,7 +2593,7 @@ The user can then send the message by using <code class="language-plaintext high
     <time>2025</time>
 
     
-      <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>.
+      <a href="https://code.devsnc.com/gopi-veeranki">Gopi Veeranki</a>.
     
   </p>
 

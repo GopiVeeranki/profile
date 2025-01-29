@@ -31,7 +31,7 @@
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Script - Group Generator" />
-<meta name="author" content="Sai Nagarjuna Reddy Tadiparthi" />
+<meta name="author" content="Gopi Veeranki" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="This page documents the Group Generator Script, a JavaScript function that automates the creation of user groups in the sys_user_group table. The script is highly customizable, allowing you to specify the starting index, the number of groups to generate, and the prefix for group names." />
 <meta property="og:description" content="This page documents the Group Generator Script, a JavaScript function that automates the creation of user groups in the sys_user_group table. The script is highly customizable, allowing you to specify the starting index, the number of groups to generate, and the prefix for group names." />
@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Script - Group Generator" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sai Nagarjuna Reddy Tadiparthi","url":"https://code.devsnc.com/sainagarj-tadiparthi"},"dateModified":"2025-01-06T13:22:21+05:30","datePublished":"2024-12-18T00:00:00+05:30","description":"This page documents the Group Generator Script, a JavaScript function that automates the creation of user groups in the sys_user_group table. The script is highly customizable, allowing you to specify the starting index, the number of groups to generate, and the prefix for group names.","headline":"Script - Group Generator","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/script-create-groups/"},"url":"https://code.devsnc.com/profile/profile/posts/script-create-groups/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gopi Veeranki","url":"https://github.com/GopiVeeranki"},"dateModified":"2025-01-06T13:22:21+05:30","datePublished":"2024-12-18T00:00:00+05:30","description":"This page documents the Group Generator Script, a JavaScript function that automates the creation of user groups in the sys_user_group table. The script is highly customizable, allowing you to specify the starting index, the number of groups to generate, and the prefix for group names.","headline":"Script - Group Generator","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/script-create-groups/"},"url":"https://code.devsnc.com/profile/profile/posts/script-create-groups/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -313,7 +313,7 @@
 
       
         <a
-          href="https://code.devsnc.com/sainagarj-tadiparthi"
+          href="https://code.devsnc.com/gopi-veeranki"
           aria-label="code.devsnc"
           
 
@@ -618,7 +618,7 @@
 
           
             
-              <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>
+              <a href="https://github.com/GopiVeeranki">Gopi Veeranki</a>
               
             
           
@@ -656,7 +656,7 @@
             By:
             <em>
               
-                <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>
+                <a href="https://github.com/GopiVeeranki">Gopi Veeranki</a>
                 
               
             </em>
@@ -702,6 +702,7 @@
     <h1 id="script">Script</h1>
 
 <h2 id="table-of-contents"><span class="me-2">Table of Contents</span><a href="#table-of-contents" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
 <ul>
   <li><a href="#overview">Overview</a></li>
   <li><a href="#code-example">Code Example</a></li>
@@ -716,6 +717,7 @@
 <h2 id="overview"><span class="me-2">Overview</span><a href="#overview" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
 
 <p>The <strong>Group Generator Script</strong> provides a straightforward way to generate user groups in the ServiceNow <code class="language-plaintext highlighter-rouge">sys_user_group</code> table. It allows you to:</p>
+
 <ul>
   <li>Specify the <strong>starting index</strong> for the group names.</li>
   <li>Define the <strong>number of groups</strong> to create.</li>
@@ -793,19 +795,19 @@
 
   <span class="c1">// Default to 'GeneratedGroup_' if namePrefix is not provided</span>
   <span class="k">if </span><span class="p">(</span><span class="nx">gs</span><span class="p">.</span><span class="nf">nil</span><span class="p">(</span><span class="nx">namePrefix</span><span class="p">))</span> <span class="p">{</span>
-    <span class="nx">namePrefix</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">GeneratedGroup_</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">namePrefix</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">GeneratedGroup_</span><span class="dl">"</span><span class="p">;</span>
   <span class="p">}</span>
 
   <span class="kd">var</span> <span class="nx">groupIds</span> <span class="o">=</span> <span class="p">[];</span>
 
-  <span class="kd">var</span> <span class="nx">groupRecord</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">GlideRecord</span><span class="p">(</span><span class="dl">'</span><span class="s1">sys_user_group</span><span class="dl">'</span><span class="p">);</span>
+  <span class="kd">var</span> <span class="nx">groupRecord</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">GlideRecord</span><span class="p">(</span><span class="dl">"</span><span class="s2">sys_user_group</span><span class="dl">"</span><span class="p">);</span>
   <span class="nx">groupRecord</span><span class="p">.</span><span class="nf">initialize</span><span class="p">();</span>
 
   <span class="c1">// Loop through and create the specified number of groups</span>
-  <span class="k">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">startIndex</span><span class="p">;</span> <span class="nx">index</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nx">startIndex</span> <span class="o">+</span> <span class="nx">groupCount</span><span class="p">);</span> <span class="nx">index</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">for </span><span class="p">(</span><span class="kd">var</span> <span class="nx">index</span> <span class="o">=</span> <span class="nx">startIndex</span><span class="p">;</span> <span class="nx">index</span> <span class="o">&lt;</span> <span class="nx">startIndex</span> <span class="o">+</span> <span class="nx">groupCount</span><span class="p">;</span> <span class="nx">index</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">groupName</span> <span class="o">=</span> <span class="nx">namePrefix</span> <span class="o">+</span> <span class="nx">index</span><span class="p">;</span>
     <span class="nx">groupRecord</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">groupName</span><span class="p">;</span>
-    <span class="nx">groupRecord</span><span class="p">.</span><span class="nx">email</span> <span class="o">=</span> <span class="nx">groupName</span><span class="p">.</span><span class="nf">toLowerCase</span><span class="p">()</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">@example.com</span><span class="dl">'</span><span class="p">;</span>
+    <span class="nx">groupRecord</span><span class="p">.</span><span class="nx">email</span> <span class="o">=</span> <span class="nx">groupName</span><span class="p">.</span><span class="nf">toLowerCase</span><span class="p">()</span> <span class="o">+</span> <span class="dl">"</span><span class="s2">@example.com</span><span class="dl">"</span><span class="p">;</span>
     <span class="nx">groupRecord</span><span class="p">.</span><span class="nf">setWorkflow</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
     <span class="nx">groupIds</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="nx">groupRecord</span><span class="p">.</span><span class="nf">insert</span><span class="p">());</span>
   <span class="p">}</span>
@@ -868,13 +870,14 @@ An array containing the record IDs of each created group in the <code class="lan
 4
 5
 </pre></td><td class="rouge-code"><pre><span class="c1">// Example usage of generateGroups function to create 100 groups starting from index 0</span>
-<span class="kd">var</span> <span class="nx">groupIds</span> <span class="o">=</span> <span class="nf">generateGroups</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="dl">'</span><span class="s1">OncallGroup_</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">groupIds</span> <span class="o">=</span> <span class="nf">generateGroups</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="dl">"</span><span class="s2">OncallGroup_</span><span class="dl">"</span><span class="p">);</span>
 
 <span class="c1">// Log the group IDs created</span>
-<span class="nx">gs</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="dl">'</span><span class="s1">Generated Group IDs: </span><span class="dl">'</span> <span class="o">+</span> <span class="nx">groupIds</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="dl">'</span><span class="s1">, </span><span class="dl">'</span><span class="p">));</span>
+<span class="nx">gs</span><span class="p">.</span><span class="nf">info</span><span class="p">(</span><span class="dl">"</span><span class="s2">Generated Group IDs: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">groupIds</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="dl">"</span><span class="s2">, </span><span class="dl">"</span><span class="p">));</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>In this example:</p>
+
 <ul>
   <li>The script will create 100 groups named OncallGroup_0, OncallGroup_1, …, OncallGroup_99.</li>
   <li>Each group will have an email address like oncallgroup_0@example.com, oncallgroup_1@example.com, etc.</li>
@@ -2572,7 +2575,7 @@ An array containing the record IDs of each created group in the <code class="lan
     <time>2025</time>
 
     
-      <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>.
+      <a href="https://code.devsnc.com/gopi-veeranki">Gopi Veeranki</a>.
     
   </p>
 

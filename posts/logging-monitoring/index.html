@@ -31,7 +31,7 @@
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Logging and Monitoring" />
-<meta name="author" content="Sai Nagarjuna Reddy Tadiparthi" />
+<meta name="author" content="Gopi Veeranki" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Scenario" />
 <meta property="og:description" content="Scenario" />
@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Logging and Monitoring" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sai Nagarjuna Reddy Tadiparthi","url":"https://code.devsnc.com/sainagarj-tadiparthi"},"dateModified":"2025-01-06T13:22:21+05:30","datePublished":"2024-12-19T00:00:00+05:30","description":"Scenario","headline":"Logging and Monitoring","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/logging-monitoring/"},"url":"https://code.devsnc.com/profile/profile/posts/logging-monitoring/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gopi Veeranki","url":"https://github.com/GopiVeeranki"},"dateModified":"2025-01-06T13:22:21+05:30","datePublished":"2024-12-19T00:00:00+05:30","description":"Scenario","headline":"Logging and Monitoring","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/logging-monitoring/"},"url":"https://code.devsnc.com/profile/profile/posts/logging-monitoring/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -313,7 +313,7 @@
 
       
         <a
-          href="https://code.devsnc.com/sainagarj-tadiparthi"
+          href="https://code.devsnc.com/gopi-veeranki"
           aria-label="code.devsnc"
           
 
@@ -594,7 +594,7 @@
 
           
             
-              <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>
+              <a href="https://github.com/GopiVeeranki">Gopi Veeranki</a>
               
             
           
@@ -632,7 +632,7 @@
             By:
             <em>
               
-                <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>
+                <a href="https://github.com/GopiVeeranki">Gopi Veeranki</a>
                 
               
             </em>
@@ -682,6 +682,7 @@
 <hr />
 
 <p>The try class of statements should have the following form:</p>
+
 <div class="language-javascript highlighter-rouge"><div class="code-header">
         <span data-label-text="JavaScript"><i class="fas fa-code fa-fw small"></i></span>
       <button aria-label="copy" data-title-succeed="Copied!"><i class="far fa-clipboard"></i></button></div><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
@@ -689,11 +690,11 @@
 3
 4
 5
-</pre></td><td class="rouge-code"><pre><span class="k">try</span> <span class="p">{</span> 
-   <span class="nx">statements</span> 
-<span class="p">}</span> <span class="k">catch </span><span class="p">(</span><span class="nx">variable</span><span class="p">)</span> <span class="p">{</span> 
-   <span class="nx">statements</span> 
-<span class="p">}</span> 
+</pre></td><td class="rouge-code"><pre><span class="k">try</span> <span class="p">{</span>
+  <span class="nx">statements</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">catch </span><span class="p">(</span><span class="nx">variable</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">statements</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>Make sure to put your code always inside the try block to catch the exceptions and error.</p>
@@ -703,16 +704,19 @@
 <p>If we are implementing generic apis it is best to handle the exceptions in the calling methods. For Eg: Slack and MS teams use collab proxy apis. Exceptions thrown at collab proxy api must be handled differently for Slack and MS teams. Should also assess this on a case to case basis based on the use cases applicable.</p>
 
 <h3 id="scenario-1"><span class="me-2">Scenario 1:</span><a href="#scenario-1" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
 <ul>
   <li>Slack API is down and the user commands are failing. With the proper invocation of monitoring API as shown below, an alert is created and the on-call team member is notified based on which we can communicate to the customer well in advance.</li>
 </ul>
 
 <h3 id="scenario-2"><span class="me-2">Scenario 2:</span><a href="#scenario-2" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
 <ul>
   <li>Client secret for any of the integrations using OAuth expires. This would trigger alerts and the developer on-call can act on it and resolve it with minimal customer impact.</li>
 </ul>
 
 <h3 id="scenario-3"><span class="me-2">Scenario 3:</span><a href="#scenario-3" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h3>
+
 <ul>
   <li>If we are throwing errors to handle expected user validations such as to indicate the rate limits. Monitoring API should not be invoked as this will cause noise and create unwanted alerts.</li>
 </ul>
@@ -735,14 +739,16 @@
 6
 7
 8
-</pre></td><td class="rouge-code"><pre><span class="nx">fMonitoringApi</span><span class="p">.</span><span class="nf">logMessage</span><span class="p">({</span> 
-    <span class="na">feature_area</span><span class="p">:</span> <span class="nx">sn_air_monitoring</span><span class="p">.</span><span class="nx">AirMonitoringConstants</span><span class="p">.</span><span class="nx">FEATURE_AREA</span><span class="p">.</span><span class="nx">MSTEAMS_MONITORING</span><span class="p">,</span> 
-    <span class="na">object_name</span><span class="p">:</span> <span class="nx">objectName</span><span class="p">,</span> 
-    <span class="na">function_name</span><span class="p">:</span> <span class="nx">funcName</span><span class="p">,</span> 
-    <span class="na">function_input_parameter</span><span class="p">:</span> <span class="nx">funcParams</span><span class="p">,</span> 
-    <span class="na">log_message</span><span class="p">:</span> <span class="nx">message</span><span class="p">,</span> 
-    <span class="na">log_level</span><span class="p">:</span> <span class="nx">logLevel</span> 
-<span class="p">});</span> 
+9
+</pre></td><td class="rouge-code"><pre><span class="nx">fMonitoringApi</span><span class="p">.</span><span class="nf">logMessage</span><span class="p">({</span>
+  <span class="na">feature_area</span><span class="p">:</span>
+    <span class="nx">sn_air_monitoring</span><span class="p">.</span><span class="nx">AirMonitoringConstants</span><span class="p">.</span><span class="nx">FEATURE_AREA</span><span class="p">.</span><span class="nx">MSTEAMS_MONITORING</span><span class="p">,</span>
+  <span class="na">object_name</span><span class="p">:</span> <span class="nx">objectName</span><span class="p">,</span>
+  <span class="na">function_name</span><span class="p">:</span> <span class="nx">funcName</span><span class="p">,</span>
+  <span class="na">function_input_parameter</span><span class="p">:</span> <span class="nx">funcParams</span><span class="p">,</span>
+  <span class="na">log_message</span><span class="p">:</span> <span class="nx">message</span><span class="p">,</span>
+  <span class="na">log_level</span><span class="p">:</span> <span class="nx">logLevel</span>
+<span class="p">});</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>Add logging statements at every logical point in the code. Use gs.info / gs.debug / gs.warn depending on the logging level.</p>
@@ -2284,7 +2290,7 @@
     <time>2025</time>
 
     
-      <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>.
+      <a href="https://code.devsnc.com/gopi-veeranki">Gopi Veeranki</a>.
     
   </p>
 

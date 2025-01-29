@@ -31,7 +31,7 @@
   <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.4" />
 <meta property="og:title" content="Script - Add Roles to Users" />
-<meta name="author" content="Sai Nagarjuna Reddy Tadiparthi" />
+<meta name="author" content="Gopi Veeranki" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="This script assigns specified roles to a list of users in a ServiceNow instance. It iterates through the provided users and roles, and inserts records into the sys_user_has_role table. Ensure that a similar script does not already exist before using this." />
 <meta property="og:description" content="This script assigns specified roles to a list of users in a ServiceNow instance. It iterates through the provided users and roles, and inserts records into the sys_user_has_role table. Ensure that a similar script does not already exist before using this." />
@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Script - Add Roles to Users" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Sai Nagarjuna Reddy Tadiparthi","url":"https://code.devsnc.com/sainagarj-tadiparthi"},"dateModified":"2025-01-06T13:22:21+05:30","datePublished":"2024-12-19T00:00:00+05:30","description":"This script assigns specified roles to a list of users in a ServiceNow instance. It iterates through the provided users and roles, and inserts records into the sys_user_has_role table. Ensure that a similar script does not already exist before using this.","headline":"Script - Add Roles to Users","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/script-add-roles-to-users/"},"url":"https://code.devsnc.com/profile/profile/posts/script-add-roles-to-users/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gopi Veeranki","url":"https://github.com/GopiVeeranki"},"dateModified":"2025-01-06T13:22:21+05:30","datePublished":"2024-12-19T00:00:00+05:30","description":"This script assigns specified roles to a list of users in a ServiceNow instance. It iterates through the provided users and roles, and inserts records into the sys_user_has_role table. Ensure that a similar script does not already exist before using this.","headline":"Script - Add Roles to Users","mainEntityOfPage":{"@type":"WebPage","@id":"https://code.devsnc.com/profile/profile/posts/script-add-roles-to-users/"},"url":"https://code.devsnc.com/profile/profile/posts/script-add-roles-to-users/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -313,7 +313,7 @@
 
       
         <a
-          href="https://code.devsnc.com/sainagarj-tadiparthi"
+          href="https://code.devsnc.com/gopi-veeranki"
           aria-label="code.devsnc"
           
 
@@ -618,7 +618,7 @@
 
           
             
-              <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>
+              <a href="https://github.com/GopiVeeranki">Gopi Veeranki</a>
               
             
           
@@ -656,7 +656,7 @@
             By:
             <em>
               
-                <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>
+                <a href="https://github.com/GopiVeeranki">Gopi Veeranki</a>
                 
               
             </em>
@@ -700,6 +700,7 @@
 
   <div class="content">
     <h2 id="table-of-contents"><span class="me-2">Table of Contents</span><a href="#table-of-contents" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
+
 <ul>
   <li><a href="#overview">Overview</a></li>
   <li><a href="#code-example">Code Example</a></li>
@@ -745,7 +746,7 @@
 22
 </pre></td><td class="rouge-code"><pre><span class="cm">/**
  * Adds roles to specified users in the ServiceNow instance.
- * 
+ *
  * @param {Array&lt;string&gt;} usersForRoles - List of user sys_ids to assign roles to.
  * @param {Array&lt;string&gt;} roles - List of role sys_ids to assign to the users.
  * @param {string} [groupId] - (Optional) The group ID to associate the role assignment with.
@@ -817,15 +818,13 @@
 5
 6
 7
-8
 </pre></td><td class="rouge-code"><pre><span class="c1">// Example usage of addRolesToUser</span>
-<span class="kd">var</span> <span class="nx">users</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">user_sys_id_1</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">user_sys_id_2</span><span class="dl">'</span><span class="p">];</span>
-<span class="kd">var</span> <span class="nx">roles</span> <span class="o">=</span> <span class="p">[</span><span class="dl">'</span><span class="s1">role_sys_id_1</span><span class="dl">'</span><span class="p">,</span> <span class="dl">'</span><span class="s1">role_sys_id_2</span><span class="dl">'</span><span class="p">];</span>
-<span class="kd">var</span> <span class="nx">groupId</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">group_sys_id_1</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">users</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">user_sys_id_1</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">user_sys_id_2</span><span class="dl">"</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">roles</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">role_sys_id_1</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">role_sys_id_2</span><span class="dl">"</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">groupId</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">group_sys_id_1</span><span class="dl">"</span><span class="p">;</span>
 
 <span class="c1">// Assign roles to users</span>
 <span class="nf">addRolesToUser</span><span class="p">(</span><span class="nx">users</span><span class="p">,</span> <span class="nx">roles</span><span class="p">,</span> <span class="nx">groupId</span><span class="p">);</span>
-
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>The script will assign the specified roles to each user in the <code class="language-plaintext highlighter-rouge">users</code> array. If a <code class="language-plaintext highlighter-rouge">groupId</code> is provided, it will associate the role assignment with that group.</p>
@@ -2513,7 +2512,7 @@
     <time>2025</time>
 
     
-      <a href="https://code.devsnc.com/sainagarj-tadiparthi">Sai Nagarjuna Reddy Tadiparthi</a>.
+      <a href="https://code.devsnc.com/gopi-veeranki">Gopi Veeranki</a>.
     
   </p>
 
